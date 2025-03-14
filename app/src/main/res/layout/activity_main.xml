@@ -1,0 +1,228 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+   <![CDATA[
+    \", y seleccionando la unidad con ayuda de los botones °C, °F o °K."
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    ]]>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Conversor de Unidades de Temperatura"
+        android:textColor="#008000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="81dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/temperatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/description"
+        Valor
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="El conversor de unidades se usa introduciendo el valor numérico de temperatura en el campo “Valor”, y seleccionando la unidad con ayuda de los botones °C, °F o °K."
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <EditText
+        android:id="@+id/input_value"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_border"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="#050505"
+        android:textColorHint="#D8E6D8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="369dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_value">
+
+    </LinearLayout>
+
+    <!-- Tabla de resultados -->
+    <TableLayout
+        android:id="@+id/result_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_layout">
+
+        <!-- Encabezado -->
+        <TableRow>
+
+        </TableRow>
+
+        <!-- Filas de resultados -->
+        <TableRow>
+
+        </TableRow>
+
+        <TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="33dp"
+        android:background="#4CAF50"
+        android:padding="8dp"
+        android:text="Unidad"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="551dp" />
+
+    <TextView
+        android:layout_width="162dp"
+        android:layout_height="33dp"
+        android:background="#4CAF50"
+        android:padding="8dp"
+        android:text="Valor"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="549dp" />
+
+    <TextView
+        android:id="@+id/value_celsius"
+        android:layout_width="161dp"
+        android:layout_height="32dp"
+        android:background="#F0EBEB"
+        android:padding="8dp"
+        android:text="-"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="588dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="178dp"
+        android:layout_height="33dp"
+        android:background="#EDE7E7"
+        android:padding="8dp"
+        android:text="°C"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="588dp" />
+
+    <TextView
+        android:layout_width="178dp"
+        android:layout_height="34dp"
+        android:background="#EDE7E7"
+        android:padding="8dp"
+        android:text="°F"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="623dp" />
+
+    <TextView
+        android:id="@+id/value_fahrenheit"
+        android:layout_width="162dp"
+        android:layout_height="35dp"
+        android:background="#EDE7E7"
+        android:padding="8dp"
+        android:text="-"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="623dp" />
+
+    <TextView
+        android:id="@+id/value_kelvin"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:background="#EDE7E7"
+        android:padding="8dp"
+        android:text="-"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="663dp" />
+
+    <TextView
+        android:layout_width="179dp"
+        android:layout_height="30dp"
+        android:background="#EDE7E7"
+        android:padding="8dp"
+        android:text="°K"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="663dp" />
+
+    <Button
+        android:id="@+id/button_fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:text="°F"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <Button
+        android:id="@+id/button_kelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:backgroundTint="#4CAF50"
+        android:text="°K"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_fahrenheit"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <Button
+        android:id="@+id/button_celsius"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="#4CAF50"
+        android:text="°C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="454dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
